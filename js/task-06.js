@@ -1,31 +1,27 @@
-//Напиши функцию calculateTotalPrice(allProdcuts, productName), которая получает массив объектов и имя продукта (значение свойства name). 
-//Возвращает общую стоимость продукта (цена * количество).
-
-//Вызовы функции для проверки работоспособности твоей реализации.
+// Write a function called calculateTotalPrice(allProducts, productName) that takes an array of objects and a product name (value of the 'name' property).
+// It returns the total price of the product (price * quantity).
 
 const products = [
-  { name: 'Радар', price: 1300, quantity: 4 },
-  { name: 'Сканер', price: 2700, quantity: 3 },
-  { name: 'Дроид', price: 400, quantity: 7 },
-  { name: 'Захват', price: 1200, quantity: 2 },
-];
-
-const calculateTotalPrice = function(allProdcuts, productName) {
+	{ name: 'Radar', price: 1300, quantity: 4 },
+	{ name: 'Scanner', price: 2700, quantity: 3 },
+	{ name: 'Droid', price: 400, quantity: 7 },
+	{ name: 'Capture', price: 1200, quantity: 2 },
+  ];
   
-    for (let i=0; allProdcuts.length > i; i++) {
-        let tempObject = allProdcuts[i];
-         if (tempObject.name === productName){
-            let totalСost = tempObject.price*tempObject.quantity
-            return(totalСost);
-        }
-      
-    }
-
-};
-
-/*
- * Вызовы функции для проверки работоспособности твоей реализации.
- */
-console.log(calculateTotalPrice(products, 'Радар')); // 5200
-
-console.log(calculateTotalPrice(products, 'Дроид')); // 2800
+  const calculateTotalPrice = function(allProducts, productName) {
+	for (let i = 0; i < allProducts.length; i++) {
+	  let tempObject = allProducts[i];
+	  if (tempObject.name === productName) {
+		let totalCost = tempObject.price * tempObject.quantity;
+		return totalCost;
+	  }
+	}
+  };
+  
+  /*
+   * Function calls to test the implementation.
+   */
+  console.log(calculateTotalPrice(products, 'Radar')); // Output: 5200
+  
+  console.log(calculateTotalPrice(products, 'Droid')); // Output: 2800
+  
